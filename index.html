@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     BEFORE GOING LIVE — replace every [PLACEHOLDER] below:
+     - Phone number (appears in header, hero, CTA band, footer, schema)
+     - Business address / service area radius
+     - Real jobsite photos (currently a line-art SVG hero graphic)
+     - Real customer testimonials (currently illustrative placeholders)
+     - Google Ads conversion ID + GA4 measurement ID (see comments below)
+     - WSIB / insurance / licence numbers if you want them displayed
+     ============================================================ -->
+
+<title>Eavestrough Installation Guelph | Licensed Local Installers | Eavestrough Repair Guys</title>
+<meta name="description" content="Eavestrough installation in Guelph, ON. Seamless aluminum eavestrough, gutter guards, repair and cleaning. Local crew, free on-site quotes. Call [PLACEHOLDER PHONE].">
+<link rel="canonical" href="https://www.eavestroughinstallationguelph.ca/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eavestrough Installation Guelph | Eavestrough Repair Guys">
+<meta property="og:description" content="Seamless eavestrough installation, repair, gutter guards and cleaning in Guelph, ON. Free on-site quotes.">
+<meta property="og:url" content="https://www.eavestroughinstallationguelph.ca/">
+<meta property="og:locale" content="en_CA">
+
+<style>
+/* ============================================================
+   EAVESTROUGH INSTALLATION GUELPH — Design System
+   Palette grounded in real eavestrough material/finish names:
+   - Charcoal: roofline/shadow
+   - Aluminum: the material itself (background)
+   - Royal Brown: a genuine standard eavestrough colour, used as accent
+   - Slate: structural steel grey
+   - Rain: the water the whole trade exists to move
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --charcoal: #1D2226;
+  --charcoal-soft: #2A3136;
+  --aluminum: #F5F3EE;
+  --aluminum-dim: #EAE7DE;
+  --white: #FFFFFF;
+  --brown: #5C3A24;
+  --brown-deep: #43291A;
+  --brown-light: #7A5138;
+  --slate: #52626B;
+  --slate-dim: #8A97A0;
+  --rain: #7A98A3;
+  --rain-dim: #C7D5D9;
+
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Public Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --max: 1180px;
+  --radius: 3px;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family: var(--font-body);
+  background: var(--aluminum);
+  color: var(--charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img{max-width:100%; display:block;}
+
+a{color:inherit; text-decoration:none;}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+h1,h2,h3,h4{
+  font-family: var(--font-display);
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:0.01em;
+}
+
+h2{font-size:clamp(1.7rem, 3.2vw, 2.5rem); text-transform:uppercase; letter-spacing:0.03em;}
+h3{font-size:1.25rem;}
+
+.eyebrow{
+  font-family: var(--font-mono);
+  font-size:0.78rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--brown);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{
+  content:"";
+  width:22px; height:2px;
+  background:var(--brown);
+  display:inline-block;
+}
+
+/* ---------- roofline motif (signature element) ----------
+   A recurring gutter cross-section: a horizontal channel with a
+   drip-edge lip, used as section dividers instead of generic waves. */
+.roofline-divider{
+  width:100%;
+  height:22px;
+  display:block;
+}
+.roofline-divider svg{width:100%; height:100%; display:block;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:var(--charcoal);
+  border-bottom:2px solid var(--brown);
+}
+.site-header .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:76px;
+}
+.logo{
+  font-family:var(--font-display);
+  color:var(--white);
+  font-size:1.15rem;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+}
+.logo span{color:var(--rain);}
+.nav-links{display:flex; gap:28px; align-items:center;}
+.nav-links a{
+  color:var(--aluminum-dim);
+  font-size:0.92rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+}
+.nav-links a:hover{color:var(--rain);}
+.header-cta{
+  display:flex; align-items:center; gap:16px;
+}
+.phone-badge{
+  font-family:var(--font-mono);
+  color:var(--white);
+  font-size:1.05rem;
+  font-weight:600;
+  display:flex; align-items:center; gap:8px;
+}
+.phone-badge svg{width:18px; height:18px; fill:var(--rain);}
+.btn{
+  display:inline-block;
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-size:0.9rem;
+  padding:13px 26px;
+  border-radius:var(--radius);
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.btn-primary{background:var(--brown); color:var(--white);}
+.btn-primary:hover{background:var(--brown-deep);}
+.btn-outline{border-color:var(--white); color:var(--white); background:transparent;}
+.btn-outline:hover{background:var(--white); color:var(--charcoal);}
+.mobile-toggle{display:none; background:none; border:none; color:var(--white); font-size:1.6rem;}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--charcoal);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+  padding:76px 0 0 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap:48px;
+  align-items:center;
+  padding:64px 0 96px;
+}
+.hero h1{
+  font-size:clamp(2.4rem, 5vw, 3.6rem);
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--rain);
+}
+.hero p.lede{
+  font-size:1.15rem;
+  color:var(--aluminum-dim);
+  max-width:46ch;
+  margin-bottom:32px;
+}
+.hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px;}
+.trust-strip{
+  display:flex; gap:28px; flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,0.12);
+  padding-top:24px;
+}
+.trust-item{
+  font-family:var(--font-mono);
+  font-size:0.82rem;
+  color:var(--slate-dim);
+  display:flex; align-items:center; gap:8px;
+}
+.trust-item svg{width:16px; height:16px; fill:var(--rain);}
+
+.hero-visual{
+  position:relative;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.14);
+}
+.hero-visual .roofline-graphic{width:100%; display:block;}
+
+/* ---------- quote form ---------- */
+.quote-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:32px;
+  box-shadow:0 24px 60px rgba(0,0,0,0.25);
+  color:var(--charcoal);
+}
+.quote-card h3{
+  text-transform:uppercase;
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+.quote-card .sub{
+  font-size:0.88rem;
+  color:var(--slate);
+  margin-bottom:20px;
+}
+.field{margin-bottom:14px;}
+.field label{
+  display:block;
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--slate);
+  margin-bottom:5px;
+  font-weight:600;
+}
+.field input, .field select, .field textarea{
+  width:100%;
+  padding:11px 12px;
+  border:1.5px solid var(--aluminum-dim);
+  border-radius:var(--radius);
+  font-family:var(--font-body);
+  font-size:0.95rem;
+  background:var(--aluminum);
+}
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--brown);
+}
+.quote-card .btn-primary{width:100%; text-align:center; margin-top:6px;}
+.quote-fineprint{
+  font-size:0.75rem; color:var(--slate-dim); margin-top:12px; text-align:center;
+}
+
+/* ---------- services ---------- */
+.section{padding:88px 0;}
+.section-head{max-width:640px; margin-bottom:48px;}
+.section-head p{color:var(--slate); font-size:1.05rem;}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:24px;
+}
+.service-card{
+  background:var(--white);
+  border:1px solid var(--aluminum-dim);
+  border-top:4px solid var(--brown);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.service-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px rgba(29,34,38,0.1);}
+.service-card .num{
+  font-family:var(--font-mono);
+  color:var(--rain);
+  font-size:0.8rem;
+  margin-bottom:10px;
+  display:block;
+}
+.service-card h3{margin-bottom:10px; text-transform:uppercase;}
+.service-card p{color:var(--slate); font-size:0.94rem; margin-bottom:18px;}
+.service-card a.card-link{
+  font-family:var(--font-mono);
+  font-size:0.82rem;
+  color:var(--brown);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+}
+.service-card a.card-link:hover{color:var(--brown-deep);}
+
+/* ---------- dark band (why-us / process) ---------- */
+.band-dark{
+  background:var(--charcoal);
+  color:var(--white);
+}
+.band-dark .section-head p{color:var(--slate-dim);}
+.band-dark .eyebrow{color:var(--rain);}
+.band-dark .eyebrow::before{background:var(--rain);}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+}
+.process-step{border-left:2px solid var(--rain); padding-left:18px;}
+.process-step .step-no{
+  font-family:var(--font-mono);
+  color:var(--rain);
+  font-size:1.6rem;
+  display:block;
+  margin-bottom:8px;
+}
+.process-step h4{text-transform:uppercase; font-size:1rem; margin-bottom:8px; color:var(--white);}
+.process-step p{font-size:0.9rem; color:var(--slate-dim);}
+
+/* ---------- why-us checklist ---------- */
+.why-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:44px;
+  align-items:start;
+}
+.check-list{list-style:none;}
+.check-list li{
+  display:flex; gap:14px; align-items:flex-start;
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.check-list li:last-child{border-bottom:none;}
+.check-list svg{width:20px; height:20px; flex-shrink:0; fill:var(--rain); margin-top:2px;}
+.check-list strong{display:block; margin-bottom:3px; color:var(--white);}
+.check-list span.detail{font-size:0.9rem; color:var(--slate-dim);}
+
+/* ---------- service area ---------- */
+.area-list{
+  display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;
+}
+.area-chip{
+  font-family:var(--font-mono);
+  font-size:0.85rem;
+  padding:9px 16px;
+  border:1.5px solid var(--slate-dim);
+  border-radius:20px;
+  color:var(--charcoal);
+}
+
+/* ---------- testimonials ---------- */
+.testi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:24px;
+}
+.testi-card{
+  background:var(--white);
+  border:1px solid var(--aluminum-dim);
+  border-radius:var(--radius);
+  padding:28px;
+}
+.stars{color:var(--brown); font-size:1rem; margin-bottom:14px; letter-spacing:2px;}
+.testi-card p.quote{font-size:0.98rem; margin-bottom:18px; color:var(--charcoal);}
+.testi-card .who{
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  color:var(--slate);
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+}
+
+/* ---------- FAQ ---------- */
+.faq-item{
+  border-bottom:1px solid var(--aluminum-dim);
+}
+.faq-q{
+  width:100%;
+  text-align:left;
+  background:none; border:none;
+  padding:22px 0;
+  font-family:var(--font-display);
+  font-size:1.05rem;
+  text-transform:uppercase;
+  letter-spacing:0.01em;
+  color:var(--charcoal);
+  display:flex; justify-content:space-between; align-items:center;
+  cursor:pointer;
+}
+.faq-q .icon{
+  font-family:var(--font-mono);
+  font-size:1.3rem;
+  color:var(--brown);
+  transition:transform .15s ease;
+}
+.faq-item.open .faq-q .icon{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .2s ease;
+  color:var(--slate);
+  font-size:0.95rem;
+}
+.faq-item.open .faq-a{max-height:280px;}
+.faq-a-inner{padding-bottom:22px; max-width:70ch;}
+
+/* ---------- final CTA band ---------- */
+.cta-band{
+  background:var(--brown);
+  color:var(--white);
+  text-align:center;
+  padding:72px 0;
+}
+.cta-band h2{color:var(--white); margin-bottom:14px;}
+.cta-band p{color:rgba(255,255,255,0.85); margin-bottom:30px; font-size:1.1rem;}
+.cta-band .btn-outline{border-color:var(--white); color:var(--white);}
+.cta-band .btn-outline:hover{background:var(--white); color:var(--brown);}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--charcoal-soft);
+  color:var(--slate-dim);
+  padding:56px 0 28px;
+  font-size:0.9rem;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:32px;
+  margin-bottom:36px;
+}
+footer h4{color:var(--white); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:16px;}
+footer ul{list-style:none;}
+footer li{margin-bottom:9px;}
+footer a:hover{color:var(--rain);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:22px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  font-size:0.8rem;
+}
+.footer-brand-note{font-family:var(--font-mono); font-size:0.76rem; color:var(--slate);}
+
+/* ---------- breadcrumb (service pages) ---------- */
+.breadcrumb{
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  color:var(--slate-dim);
+  padding:18px 0;
+}
+.breadcrumb a{color:var(--rain);}
+
+/* ---------- page hero (service pages, shorter than homepage) ---------- */
+.page-hero{
+  background:var(--charcoal);
+  color:var(--white);
+  padding:36px 0 60px;
+}
+.page-hero h1{
+  font-size:clamp(2rem, 4.2vw, 3rem);
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.page-hero p.lede{color:var(--aluminum-dim); max-width:60ch; font-size:1.08rem; margin-bottom:26px;}
+
+/* ---------- two column content (service pages) ---------- */
+.content-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+.content-grid h2{font-size:1.5rem; margin:34px 0 14px;}
+.content-grid h2:first-child{margin-top:0;}
+.content-grid p{color:var(--slate); margin-bottom:16px;}
+.content-grid ul{margin:0 0 20px 20px; color:var(--slate);}
+.content-grid li{margin-bottom:8px;}
+.sticky-sidebar{position:sticky; top:100px;}
+
+.price-note{
+  background:var(--aluminum-dim);
+  border-left:3px solid var(--brown);
+  padding:18px 20px;
+  border-radius:var(--radius);
+  font-size:0.92rem;
+  margin:24px 0;
+}
+.price-note strong{color:var(--brown-deep);}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px){
+  .hero-grid, .why-grid, .content-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:repeat(2, 1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none; position:absolute; top:76px; left:0; right:0; background:var(--charcoal); flex-direction:column; padding:12px 24px; gap:0; border-top:1px solid rgba(255,255,255,0.1);}
+  .nav-links.mobile-open{display:flex;}
+  .nav-links a{padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);}
+  .mobile-toggle{display:block;}
+}
+@media (max-width: 560px){
+  .process-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .phone-badge span.label{display:none;}
+}
+
+/* ---------- accessibility ---------- */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--rain);
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important; scroll-behavior:auto !important;}
+}
+
+</style>
+
+<!-- ================= Google Ads / GA4 placeholders =================
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');          // GA4 measurement ID
+  gtag('config', 'AW-XXXXXXXXX');       // Google Ads conversion ID
+</script>
+==================================================================== -->
+
+<!-- ================= LocalBusiness structured data ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Eavestrough Installation Guelph",
+  "alternateName": "Eavestrough Repair Guys",
+  "image": "https://www.eavestroughinstallationguelph.ca/hero-image.jpg",
+  "telephone": "+1-519-555-0142",
+  "priceRange": "$$-$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[PLACEHOLDER STREET ADDRESS]",
+    "addressLocality": "Guelph",
+    "addressRegion": "ON",
+    "postalCode": "[PLACEHOLDER POSTAL CODE]",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Guelph"},
+    {"@type": "City", "name": "Kitchener"},
+    {"@type": "City", "name": "Waterloo"},
+    {"@type": "City", "name": "Cambridge"}
+  ],
+  "url": "https://www.eavestroughinstallationguelph.ca/",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Eavestrough Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Eavestrough Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Eavestrough Repair"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seamless Eavestrough"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gutter Guards"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Eavestrough Cleaning"}}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Eavestrough <span>Installation</span> Guelph</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="eavestrough-repair-guelph.html">Repair</a>
+      <a href="gutter-guards-guelph.html">Gutter Guards</a>
+      <a href="eavestrough-cleaning-guelph.html">Cleaning</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+15195550142" class="phone-badge">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.4c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        <span class="label">(519) 555-0142</span>
+      </a>
+      <a href="#quote" class="btn btn-primary">Free Quote</a>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Guelph, ON &middot; Locally Operated</div>
+      <h1>Eavestrough Installation <em>Guelph</em> Homeowners Actually Trust</h1>
+      <p class="lede">Seamless aluminum eavestrough, cut and formed on-site to fit your roofline exactly &mdash; no seams, no leaks, no guesswork. Same local crew from quote to final walk-around.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary">Get a Free On-Site Quote</a>
+        <a href="tel:+15195550142" class="btn btn-outline">Call (519) 555-0142</a>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z"/></svg>Insured &amp; WSIB covered</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.4-.7L12 2z"/></svg>Locally based, not a call centre</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>Written estimate before any work starts</div>
+      </div>
+    </div>
+
+    <!-- Signature visual: line-art cutaway of a roof edge, gutter trough
+         and downspout with water flow — the actual mechanics of the trade,
+         used in place of a stock photo. Swap for real jobsite photography
+         when available. -->
+    <div class="hero-visual">
+      <svg class="roofline-graphic" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a roofline, eavestrough and downspout">
+        <rect width="520" height="420" fill="#2A3136"/>
+        <!-- roof surface -->
+        <path d="M40 60 L 460 210 L 460 226 L 40 76 Z" fill="#52626B"/>
+        <!-- fascia -->
+        <rect x="30" y="200" width="30" height="34" fill="#1D2226"/>
+        <!-- gutter trough -->
+        <path d="M60 214 h190 v22 a10 10 0 0 1 -10 10 h-170 a10 10 0 0 1 -10 -10 z" fill="#F5F3EE"/>
+        <rect x="60" y="214" width="190" height="6" fill="#7A98A3"/>
+        <!-- gutter hangers -->
+        <rect x="90" y="234" width="4" height="10" fill="#5C3A24"/>
+        <rect x="150" y="234" width="4" height="10" fill="#5C3A24"/>
+        <rect x="210" y="234" width="4" height="10" fill="#5C3A24"/>
+        <!-- downspout -->
+        <rect x="230" y="246" width="20" height="130" fill="#5C3A24"/>
+        <rect x="226" y="376" width="28" height="10" fill="#43291A"/>
+        <!-- rain droplets -->
+        <g fill="#7A98A3">
+          <ellipse cx="140" cy="110" rx="4" ry="7"/>
+          <ellipse cx="200" cy="90" rx="4" ry="7"/>
+          <ellipse cx="260" cy="130" rx="4" ry="7"/>
+          <ellipse cx="320" cy="100" rx="4" ry="7"/>
+        </g>
+        <!-- flow arrows: roof -> trough -> downspout -->
+        <path d="M150 130 Q120 190 90 215" stroke="#7A98A3" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
+        <path d="M230 150 Q220 195 200 216" stroke="#7A98A3" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
+        <path d="M170 232 Q205 250 228 258" stroke="#7A98A3" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
+        <text x="30" y="300" fill="#8A97A0" font-family="IBM Plex Mono, monospace" font-size="12">SEAMLESS &middot; ALUMINUM &middot; 5&Prime; / 6&Prime; PROFILE</text>
+      </svg>
+    </div>
+  </div>
+</section>
+<div class="roofline-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 22" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="4" x2="1200" y2="4" stroke="#8A97A0" stroke-width="2"/>
+    <g stroke="#5C3A24" stroke-width="3">
+      <line x1="30" y1="4" x2="30" y2="18"/><line x1="90" y1="4" x2="90" y2="18"/><line x1="150" y1="4" x2="150" y2="18"/>
+      <line x1="210" y1="4" x2="210" y2="18"/><line x1="270" y1="4" x2="270" y2="18"/><line x1="330" y1="4" x2="330" y2="18"/>
+      <line x1="390" y1="4" x2="390" y2="18"/><line x1="450" y1="4" x2="450" y2="18"/><line x1="510" y1="4" x2="510" y2="18"/>
+      <line x1="570" y1="4" x2="570" y2="18"/><line x1="630" y1="4" x2="630" y2="18"/><line x1="690" y1="4" x2="690" y2="18"/>
+      <line x1="750" y1="4" x2="750" y2="18"/><line x1="810" y1="4" x2="810" y2="18"/><line x1="870" y1="4" x2="870" y2="18"/>
+      <line x1="930" y1="4" x2="930" y2="18"/><line x1="990" y1="4" x2="990" y2="18"/><line x1="1050" y1="4" x2="1050" y2="18"/>
+      <line x1="1110" y1="4" x2="1110" y2="18"/><line x1="1170" y1="4" x2="1170" y2="18"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Install &amp; Fix</div>
+      <h2>Eavestrough Services in Guelph</h2>
+      <p>One local crew, five ways to keep water off your foundation, fascia and siding.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Eavestrough Installation</h3>
+        <p>Seamless aluminum eavestrough formed on-site to your exact roofline. Standard 5&Prime; or heavy-flow 6&Prime; profile, colour-matched to your fascia.</p>
+        <a href="#quote" class="card-link">Get a quote &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Eavestrough Repair</h3>
+        <p>Sagging sections, leaking joints, pulled-away hangers and pooling water &mdash; fixed fast, without a full replacement unless you actually need one.</p>
+        <a href="eavestrough-repair-guelph.html" class="card-link">See repair details &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>Seamless Eavestrough</h3>
+        <p>No horizontal seams means no seam leaks &mdash; the single biggest failure point in older sectional gutter systems.</p>
+        <a href="#quote" class="card-link">Ask about seamless &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>Gutter Guards</h3>
+        <p>Keep leaves and debris out so water actually reaches the downspout &mdash; especially worth it if you're near mature trees.</p>
+        <a href="gutter-guards-guelph.html" class="card-link">Compare guard options &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <span class="num">05</span>
+        <h3>Eavestrough Cleaning</h3>
+        <p>Seasonal clean-outs before spring rain and fall leaf-drop, so your system does its job when it matters most.</p>
+        <a href="eavestrough-cleaning-guelph.html" class="card-link">Book a clean-out &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section band-dark">
+  <div class="wrap why-grid">
+    <div>
+      <div class="eyebrow">Why Guelph Homeowners Call Us</div>
+      <h2>Built On-Site, Not In A Warehouse</h2>
+      <p>Every run of eavestrough we install is formed right at your house from a coil of raw aluminum &mdash; matched to your roofline, not a stock length cut to fit.</p>
+    </div>
+    <ul class="check-list">
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>
+        <div>
+          <strong>Same crew, start to finish</strong>
+          <span class="detail">The person who quotes the job is the person who shows up to run it.</span>
+        </div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>
+        <div>
+          <strong>Written estimate, no surprise add-ons</strong>
+          <span class="detail">You approve the scope and price before any material gets cut.</span>
+        </div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>
+        <div>
+          <strong>Insured and WSIB-covered</strong>
+          <span class="detail">Ladder work on your fascia, done by a covered crew &mdash; not a side-gig.</span>
+        </div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>
+        <div>
+          <strong>Guelph-based, not dispatched from out of town</strong>
+          <span class="detail">We know the housing stock here &mdash; from older South End homes to new builds out by the Hanlon.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>From Call To Finished Eavestrough</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="step-no">01</span>
+        <h4>You reach out</h4>
+        <p>Call or fill out the quote form &mdash; tell us install, repair, guards or cleaning.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-no">02</span>
+        <h4>On-site assessment</h4>
+        <p>We measure your roofline in person and give you a written price, not a phone guess.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-no">03</span>
+        <h4>Eavestrough formed on-site</h4>
+        <p>Seamless aluminum is cut to length right at your house &mdash; no factory seams to fail later.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-no">04</span>
+        <h4>Final walk-around</h4>
+        <p>We check every joint and hanger with you before we call the job done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE AREA ================= -->
+<section class="section band-dark">
+  <div class="wrap">
+    <div class="eyebrow">Where We Work</div>
+    <h2>Guelph &amp; Surrounding Area</h2>
+    <p style="color:var(--slate-dim); max-width:60ch; margin-top:10px;">Based in Guelph, also taking jobs across Kitchener, Waterloo and Cambridge on a limited schedule.</p>
+    <div class="area-list">
+      <span class="area-chip">Guelph</span>
+      <span class="area-chip">Kitchener</span>
+      <span class="area-chip">Waterloo</span>
+      <span class="area-chip">Cambridge</span>
+      <span class="area-chip">Rockwood</span>
+      <span class="area-chip">Fergus</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">[PLACEHOLDER — swap in real reviews]</div>
+      <h2>What Guelph Homeowners Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"[Placeholder testimonial] Showed up on time, gave us a real number up front, and the new eavestrough hasn't backed up once since &mdash; even in the fall with our maple trees."</p>
+        <div class="who">&mdash; Homeowner, Kortright area</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"[Placeholder testimonial] Old sectional gutters were leaking at every seam. Went seamless and the difference after one rainstorm was obvious."</p>
+        <div class="who">&mdash; Homeowner, Guelph South End</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"[Placeholder testimonial] Quoted the same day we called, work was done within the week. No pressure to add on services we didn't need."</p>
+        <div class="who">&mdash; Homeowner, Guelph, Grange Hill</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">Common Questions</div>
+      <h2>Eavestrough Installation FAQ</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How much does eavestrough installation cost in Guelph? <span class="icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Most full installations run in line with typical Ontario pricing for seamless aluminum eavestrough, depending on linear footage, profile size (5&Prime; vs 6&Prime;) and how many storeys and corners are involved. You'll get an exact written number after an on-site look, not a phone estimate.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How long does a typical install take? <span class="icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Most single-family homes are done in a single day since the eavestrough is formed on-site to length &mdash; there's no waiting on pre-cut sections to arrive.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Seamless vs. sectional eavestrough &mdash; what's the real difference? <span class="icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Sectional gutters are joined every 10 feet or so, and those joints are the most common place they eventually leak. Seamless eavestrough is formed in one continuous run at your house, so there's nothing to leak along the length &mdash; only at end caps and corners.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service Kitchener, Waterloo and Cambridge too? <span class="icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes &mdash; our home base is Guelph, and we take a limited number of jobs each week across Kitchener, Waterloo and Cambridge.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do I need gutter guards if I already have healthy eavestrough? <span class="icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Not always &mdash; but if you're near mature trees or you're cleaning your eavestrough more than twice a year, guards usually pay for themselves in avoided clean-outs and reduced overflow risk.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUOTE FORM ================= -->
+<section class="section band-dark" id="quote">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+    <div>
+      <div class="eyebrow">Free On-Site Quote</div>
+      <h2>Get A Written Price, Not A Guess</h2>
+      <p style="color:var(--slate-dim); margin-top:14px; max-width:44ch;">Tell us what you need and where you're located &mdash; we'll get back to you same or next business day to book an on-site assessment.</p>
+    </div>
+    <div class="quote-card">
+      <h3>Request Your Free Quote</h3>
+      <div class="sub">No obligation. Written estimate before any work begins.</div>
+      <form class="quote-form">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Eavestrough Installation</option>
+            <option>Eavestrough Repair</option>
+            <option>Gutter Guards</option>
+            <option>Eavestrough Cleaning</option>
+            <option>Not Sure / Need Advice</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Anything We Should Know?</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request Free Quote</button>
+        <div class="quote-fineprint">Or call <a href="tel:+15195550142" style="color:var(--brown); font-weight:600;">(519) 555-0142</a> directly.</div>
+      </form>
+      <div class="form-confirm" style="display:none; text-align:center; padding:20px 0;">
+        <h3 style="margin-bottom:10px;">Got it &mdash; thanks!</h3>
+        <p style="color:var(--slate);">We'll be in touch shortly to book your on-site quote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready For Eavestrough That Actually Holds Up?</h2>
+    <p>Call now or request a free written quote &mdash; same local crew from start to finish.</p>
+    <a href="tel:+15195550142" class="btn btn-outline">Call (519) 555-0142</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;">Eavestrough <span>Installation</span> Guelph</div>
+        <p style="max-width:32ch;">Seamless eavestrough installation, repair, gutter guards and cleaning &mdash; Guelph, ON and surrounding area.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Eavestrough Installation</a></li>
+          <li><a href="eavestrough-repair-guelph.html">Eavestrough Repair</a></li>
+          <li><a href="gutter-guards-guelph.html">Gutter Guards</a></li>
+          <li><a href="eavestrough-cleaning-guelph.html">Eavestrough Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Area</h4>
+        <ul>
+          <li>Guelph, ON</li>
+          <li>Kitchener, ON</li>
+          <li>Waterloo, ON</li>
+          <li>Cambridge, ON</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15195550142">(519) 555-0142</a></li>
+          <li>[PLACEHOLDER EMAIL]</li>
+          <li>[PLACEHOLDER ADDRESS], Guelph, ON</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Eavestrough Installation Guelph. All rights reserved.</span>
+      <span class="footer-brand-note">Operated by Eavestrough Repair Guys &middot; [PLACEHOLDER WSIB/LICENCE NO.]</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+// ============================================================
+// Eavestrough Installation Guelph — shared behaviour
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.mobile-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('mobile-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function () {
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+        openItem.classList.remove('open');
+      });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Quote form(s) — replace this handler with your real form backend
+  // (Wix Forms, a CRM webhook, or a simple mailto/Formspree endpoint).
+  document.querySelectorAll('.quote-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // TODO: send this to your real lead destination before going live.
+      // Example patterns:
+      //   fetch('https://your-endpoint.example.com/leads', { method:'POST', body: new FormData(form) })
+      //   or wire this into a Wix Forms element if embedding inside Wix.
+
+      // --- Google Ads conversion tracking placeholder ---
+      // Uncomment and fill in your conversion ID/label once Ads is live:
+      // gtag('event', 'conversion', {
+      //   'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXX'
+      // });
+
+      var confirmBox = form.querySelector('.form-confirm');
+      form.querySelectorAll('input, select, textarea, button').forEach(function (el) {
+        el.style.display = 'none';
+      });
+      if (confirmBox) {
+        confirmBox.style.display = 'block';
+      }
+    });
+  });
+
+});
+
+</script>
+</body>
+</html>
