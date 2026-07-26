@@ -690,26 +690,56 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero" id="quote">
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Guelph, ON &middot; Locally Operated</div>
       <h1>Eavestrough Installation <em>Guelph</em> Homeowners Actually Trust</h1>
       <p class="lede">Seamless aluminum eavestrough, cut and formed on-site to fit your roofline exactly &mdash; no seams, no leaks, no guesswork. Same local crew from quote to final walk-around.</p>
-      <div class="hero-actions">
-        <a href="#quote" class="btn btn-primary">Get a Free On-Site Quote</a>
-        <a href="tel:+14168455739" class="btn btn-outline">Call (416) 845-5739</a>
-      </div>
       <div class="trust-strip">
         <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z"/></svg>Insured &amp; WSIB covered</div>
         <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L22 9.3l-5 4.9L18.2 22 12 18.3 5.8 22 7 14.2l-5-4.9 7.4-.7L12 2z"/></svg>Locally based, not a call centre</div>
         <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12 3.4 13.4 9 19l12-12-1.4-1.4z"/></svg>Written estimate before any work starts</div>
       </div>
+      <div class="hero-actions" style="margin-top:28px;">
+        <a href="tel:+14168455739" class="btn btn-outline">Call (416) 845-5739</a>
+      </div>
     </div>
 
-    <!-- Real jobsite photo: crew on-site, branded workwear -->
-    <div class="hero-visual">
-      <img src="images/crew-branded.jpg" alt="Eavestrough Installation Guelph crew member on a roofline job in Guelph, ON" style="width:100%; display:block;">
+    <!-- Free quote form, front and centre in the hero -->
+    <div class="quote-card">
+      <h3>Request Your Free Quote</h3>
+      <div class="sub">No obligation. Written estimate before any work begins.</div>
+      <form class="quote-form">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Eavestrough Installation</option>
+            <option>Eavestrough Repair</option>
+            <option>Gutter Guards</option>
+            <option>Eavestrough Cleaning</option>
+            <option>Not Sure / Need Advice</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Anything We Should Know?</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request Free Quote</button>
+        <div class="quote-fineprint">Or call <a href="tel:+14168455739" style="color:var(--brown); font-weight:600;">(416) 845-5739</a> directly.</div>
+      </form>
+      <div class="form-confirm" style="display:none; text-align:center; padding:20px 0;">
+        <h3 style="margin-bottom:10px;">Got it &mdash; thanks!</h3>
+        <p style="color:var(--slate);">We'll be in touch shortly to book your on-site quote.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -874,7 +904,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       <div class="eyebrow">Recent Work</div>
       <h2>Jobs In Guelph &amp; The Surrounding Area</h2>
     </div>
-    <div class="gallery-grid">
+
+    <div class="gallery-grid" style="margin-bottom:20px;">
       <div class="gallery-tile has-photo">
         <img src="images/crew-branded.jpg" alt="Eavestrough Installation Guelph crew working on a roofline">
         <div class="cap">On-site eavestrough work, Guelph</div>
@@ -883,7 +914,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
         <img src="images/install-crew-1.jpg" alt="Eavestrough installation crew on a residential roof in Guelph">
         <div class="cap">Eavestrough install, Guelph residence</div>
       </div>
+      <div class="gallery-tile has-photo">
+        <img src="images/gutter-guard-install.jpg" alt="Gutter guard installation on a Guelph home">
+        <div class="cap">Gutter guard installation, Guelph</div>
+      </div>
+      <div class="gallery-tile has-photo">
+        <img src="images/cleaning-crew-roof.jpg" alt="Crew cleaning eavestrough on a Guelph roof">
+        <div class="cap">Crew on the roof during a clean-out, Guelph</div>
+      </div>
     </div>
+
+    <div class="before-after-pair" style="margin-bottom:20px;">
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-before-1.jpg" alt="Damaged eavestrough before repair, Guelph">
+        <div class="ba-label">Before</div>
+        <div class="cap">Sagging, damaged eavestrough section</div>
+      </div>
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-after-1.jpg" alt="Repaired eavestrough after fix, Guelph">
+        <div class="ba-label">After</div>
+        <div class="cap">Repaired and resealed run</div>
+      </div>
+    </div>
+
+    <div class="before-after-pair">
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-before-2.jpg" alt="Eavestrough issue before repair, Guelph">
+        <div class="ba-label">Before</div>
+        <div class="cap">Loose section pulling away from fascia</div>
+      </div>
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-after-2.jpg" alt="Eavestrough after repair complete, Guelph">
+        <div class="ba-label">After</div>
+        <div class="cap">Re-secured and running clean</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -956,57 +1022,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   </div>
 </section>
 
-<!-- ================= QUOTE FORM ================= -->
-<section class="section band-dark" id="quote">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
-    <div>
-      <div class="eyebrow">Free On-Site Quote</div>
-      <h2>Get A Written Price, Not A Guess</h2>
-      <p style="color:var(--slate-dim); margin-top:14px; max-width:44ch;">Tell us what you need and where you're located &mdash; we'll get back to you same or next business day to book an on-site assessment.</p>
-    </div>
-    <div class="quote-card">
-      <h3>Request Your Free Quote</h3>
-      <div class="sub">No obligation. Written estimate before any work begins.</div>
-      <form class="quote-form">
-        <div class="field">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="field">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option>Eavestrough Installation</option>
-            <option>Eavestrough Repair</option>
-            <option>Gutter Guards</option>
-            <option>Eavestrough Cleaning</option>
-            <option>Not Sure / Need Advice</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="notes">Anything We Should Know?</label>
-          <textarea id="notes" name="notes" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Request Free Quote</button>
-        <div class="quote-fineprint">Or call <a href="tel:+14168455739" style="color:var(--brown); font-weight:600;">(416) 845-5739</a> directly.</div>
-      </form>
-      <div class="form-confirm" style="display:none; text-align:center; padding:20px 0;">
-        <h3 style="margin-bottom:10px;">Got it &mdash; thanks!</h3>
-        <p style="color:var(--slate);">We'll be in touch shortly to book your on-site quote.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= FINAL CTA ================= -->
 <section class="cta-band">
   <div class="wrap">
     <h2>Ready For Eavestrough That Actually Holds Up?</h2>
     <p>Call now or request a free written quote &mdash; same local crew from start to finish.</p>
-    <a href="tel:+14168455739" class="btn btn-outline">Call (416) 845-5739</a>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="#quote" class="btn btn-outline">Get a Free Quote</a>
+      <a href="tel:+14168455739" class="btn btn-outline">Call (416) 845-5739</a>
+    </div>
   </div>
 </section>
 
