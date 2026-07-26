@@ -531,6 +531,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   gap:10px;
 }
 .gallery-tile svg{width:34px; height:34px; fill:var(--slate-dim);}
+.gallery-tile.has-photo{border:none; background:none; padding:0; overflow:hidden; position:relative; display:block;}
+.gallery-tile.has-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+.gallery-tile.has-photo .cap{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(29,34,38,0.88) 60%); color:#fff; padding:24px 14px 10px; text-align:left; font-size:0.78rem;}
+.before-after-pair{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.before-after-pair .gallery-tile{aspect-ratio:1/1;}
+.ba-label{position:absolute; top:8px; left:8px; background:var(--brown); color:#fff; font-family:var(--font-mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.05em; padding:3px 9px; border-radius:2px; z-index:2;}
 .gallery-tile .cap{
   font-family:var(--font-mono);
   font-size:0.8rem;
@@ -670,35 +676,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     <div class="section-head">
       <div class="eyebrow">Recent Work</div>
       <h2>Jobs In Guelph &amp; The Surrounding Area</h2>
-      <p>[PLACEHOLDER — swap these tiles for real before/after and on-site photos once available]</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">Before: sagging sectional gutter, Guelph south end</div>
+
+    <div class="before-after-pair" style="margin-bottom:20px;">
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-before-1.jpg" alt="Damaged eavestrough before repair, Guelph">
+        <div class="ba-label">Before</div>
+        <div class="cap">Sagging, damaged eavestrough section</div>
       </div>
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">After: hangers re-secured, slope corrected</div>
-      </div>
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">Close-up: resealed joint, no leak</div>
-      </div>
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">Before: overflow staining on fascia</div>
-      </div>
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">After: repaired run, clean fascia</div>
-      </div>
-      <div class="gallery-tile">
-        <svg viewBox="0 0 24 24"><path d="M9 3l-1.8 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-        <div class="cap">Crew on-site during repair assessment</div>
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-after-1.jpg" alt="Repaired eavestrough after fix, Guelph">
+        <div class="ba-label">After</div>
+        <div class="cap">Repaired and resealed run</div>
       </div>
     </div>
-    <p class="gallery-note">Photos from actual jobs will replace these placeholders before the site goes live.</p>
+
+    <div class="before-after-pair">
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-before-2.jpg" alt="Eavestrough issue before repair, Guelph">
+        <div class="ba-label">Before</div>
+        <div class="cap">Loose section pulling away from fascia</div>
+      </div>
+      <div class="gallery-tile has-photo">
+        <img src="images/repair-after-2.jpg" alt="Eavestrough after repair complete, Guelph">
+        <div class="ba-label">After</div>
+        <div class="cap">Re-secured and running clean</div>
+      </div>
+    </div>
   </div>
 </section>
 
