@@ -710,7 +710,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     <div class="quote-card">
       <h3>Request Your Free Quote</h3>
       <div class="sub">No obligation. Written estimate before any work begins.</div>
-      <form class="quote-form">
+      <form class="quote-form" action="https://formspree.io/f/mjgnjyed" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request &mdash; Eavestrough Installation Guelph">
+        <input type="hidden" name="page" value="Homepage / Installation">
         <div class="field">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required>
@@ -733,6 +735,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
           <label for="notes">Anything We Should Know?</label>
           <textarea id="notes" name="notes" rows="3"></textarea>
         </div>
+        <div class="form-error" style="display:none; color:#B23A2E; font-size:0.85rem; margin-bottom:14px;"></div>
         <button type="submit" class="btn btn-primary">Request Free Quote</button>
         <div class="quote-fineprint">Or call <a href="tel:+14168455739" style="color:var(--brown); font-weight:600;">(416) 845-5739</a> directly.</div>
       </form>
@@ -1117,30 +1120,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Quote form(s) — replace this handler with your real form backend
-  // (Wix Forms, a CRM webhook, or a simple mailto/Formspree endpoint).
+  // Quote form(s) — submits to Formspree (https://formspree.io/f/mjgnjyed)
   document.querySelectorAll('.quote-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // TODO: send this to your real lead destination before going live.
-      // Example patterns:
-      //   fetch('https://your-endpoint.example.com/leads', { method:'POST', body: new FormData(form) })
-      //   or wire this into a Wix Forms element if embedding inside Wix.
-
-      // --- Google Ads conversion tracking placeholder ---
-      // Uncomment and fill in your conversion ID/label once Ads is live:
-      // gtag('event', 'conversion', {
-      //   'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXX'
-      // });
-
       var confirmBox = form.querySelector('.form-confirm');
-      form.querySelectorAll('input, select, textarea, button').forEach(function (el) {
-        el.style.display = 'none';
+      var errorBox = form.querySelector('.form-error');
+      var submitBtn = form.querySelector('button[type=submit]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : '';
+      if (errorBox) errorBox.style.display = 'none';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          // --- Google Ads conversion tracking placeholder ---
+          // Uncomment and fill in your conversion ID/label once Ads is live:
+          // gtag('event', 'conversion', {
+          //   'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXX'
+          // });
+
+          form.querySelectorAll('input, select, textarea, button').forEach(function (el) {
+            el.style.display = 'none';
+          });
+          if (confirmBox) confirmBox.style.display = 'block';
+        } else {
+          response.json().then(function (data) {
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+            if (errorBox) {
+              errorBox.style.display = 'block';
+              errorBox.textContent = (data && data.errors)
+                ? 'Something went wrong — please call us directly instead.'
+                : 'Something went wrong — please call us directly instead.';
+            }
+          });
+        }
+      }).catch(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+        if (errorBox) {
+          errorBox.style.display = 'block';
+          errorBox.textContent = 'Something went wrong — please call us directly instead.';
+        }
       });
-      if (confirmBox) {
-        confirmBox.style.display = 'block';
-      }
     });
   });
 
