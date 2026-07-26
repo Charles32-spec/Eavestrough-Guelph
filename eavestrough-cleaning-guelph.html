@@ -550,6 +550,44 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font-style:italic;
 }
 
+
+/* ---------- nav services dropdown ---------- */
+.nav-dropdown{position:relative;}
+.nav-dropdown-toggle{
+  background:none; border:none; cursor:pointer;
+  display:flex; align-items:center; gap:5px;
+  color:var(--aluminum-dim);
+  font-size:0.92rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:0.04em;
+  font-family:inherit; padding:0;
+}
+.nav-dropdown-toggle:hover{color:var(--rain);}
+.nav-dropdown-toggle .chevron{width:11px; height:11px; transition:transform .15s ease;}
+.nav-dropdown.open .nav-dropdown-toggle .chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{
+  position:absolute; top:100%; left:0; margin-top:16px;
+  background:var(--charcoal-soft); border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--radius); min-width:230px; padding:8px 0;
+  display:none; box-shadow:0 18px 36px rgba(0,0,0,0.35); z-index:60;
+}
+.nav-dropdown-menu a{
+  display:block; padding:11px 18px;
+  color:var(--aluminum-dim); font-size:0.88rem;
+  text-transform:none; letter-spacing:0; font-weight:500;
+}
+.nav-dropdown-menu a:hover{background:rgba(255,255,255,0.06); color:var(--rain);}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu{display:block;}
+@media (max-width: 900px){
+  .nav-dropdown-menu{
+    position:static; box-shadow:none; border:none; background:rgba(255,255,255,0.03);
+    margin-top:6px; margin-left:0; display:none; min-width:0;
+  }
+  .nav-dropdown.open .nav-dropdown-menu{display:block;}
+  .nav-dropdown-toggle{padding:12px 0; width:100%; justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,0.08);}
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -574,10 +612,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   <div class="wrap">
     <a href="index.html" class="logo">Eavestrough <span>Installation</span> Guelph</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#services">Services</a>
-      <a href="eavestrough-repair-guelph.html">Repair</a>
-      <a href="gutter-guards-guelph.html">Gutter Guards</a>
-      <a href="eavestrough-cleaning-guelph.html">Cleaning</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#services">Eavestrough Installation</a>
+          <a href="eavestrough-repair-guelph.html">Eavestrough Repair</a>
+          <a href="gutter-guards-guelph.html">Gutter Guards</a>
+          <a href="eavestrough-cleaning-guelph.html">Eavestrough Cleaning</a>
+        </div>
+      </div>
       <a href="index.html#faq">FAQ</a>
     </nav>
     <div class="header-cta">
@@ -751,6 +794,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Services dropdown toggle (click for touch/mobile; CSS :hover handles desktop)
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var dropdown = btn.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
 
   // Mobile nav toggle
   var toggle = document.querySelector('.mobile-toggle');
